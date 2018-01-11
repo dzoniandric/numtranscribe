@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = '1.5.3'
+__version__ = '1.5.4'
 __author__ = 'dzoni.prezime@gmail.com'
 
 """
@@ -152,3 +152,21 @@ def to_words(n, long=True):
     return _final_polish(rev)
 
 __all__ = ['to_words']
+
+
+if __name__ == '__main__':
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('integer', help='this is the integer to transcribe', type=int)
+    parser.add_argument('-s', '--short', help='transcribe using short scale numbers', action='store_true')
+    parser.add_argument('--string', help='convert to string', action='store_true')
+    parser.add_argument('-c', '--capitalize', help='capitalize the output string', action='store_true')
+    args = parser.parse_args()
+    l = not args.short
+    s = to_words(args.integer, long=l)
+    if args.string:
+        s = ''.join(s)
+        if args.capitalize:
+            s = s.capitalize()
+    print s
