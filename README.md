@@ -23,9 +23,8 @@ Simpli import the module and call to_words() function with integer as a paramate
 ```python
 from numtranscribe import to_words
 w = to_words(12456)
-```
-
 [u'dvanaest', 'hiljada', u'\u010detiristo', u'pedeset', u'\u0161est']
+```
 
 ### Difference between long and short scales:
 
