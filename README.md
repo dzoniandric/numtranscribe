@@ -14,11 +14,12 @@ Setup.py will be available with the next major version.
 ```python
 import numtranscribe
 print numtranscribe.__version__
+1.5.3
 ```
 
 ## HOW TO USE?
 
-Simpli import the module and call to_words() function with integer as a paramater. With long=[bool] you can specify if you want to use a long or a short scale for translating. Default for Serbian language is long=True. You can find more about scales on: https://bs.wikipedia.org/wiki/Duga_i_kratka_skala
+Simply import the module and call to_words() function with integer as a paramater. With long=[bool] you can specify if you want to use a long or a short scale for translating. Default for Serbian language is long=True. You can find more about scales on: https://bs.wikipedia.org/wiki/Duga_i_kratka_skala
 
 ```python
 from numtranscribe import to_words
@@ -35,20 +36,18 @@ s = to_words(7831284232315690, long=False)
 print l
 print '------'
 print s
-```
 
 [u'sedam', 'bilijardi', u'osamsto', u'trideset', u'jedan', 'biliona', u'dvesta', u'osamdeset', u'\u010detiri', 'milijardi', u'dvesta', u'trideset', u'dve', 'miliona', u'trista', u'petnaest', 'hiljada', u'\u0161eststo', u'devedeset']
 ------
 [u'sedam', 'kvadriliona', u'osamsto', u'trideset', u'jedan', 'triliona', u'dvesta', u'osamdeset', u'\u010detiri', 'biliona', u'dvesta', u'trideset', u'dve', 'miliona', u'trista', u'petnaest', 'hiljada', u'\u0161eststo', u'devedeset']
-
+```
 
 then you can convert it to a string like you would do normally in Python (and Capitalize the first letter):
 
 ```python
 ''.join(w).capitalize()
-```
 Dvanaesthiljadačetiristopedesetšest
-
+```
 
 for help on using the to_words() use: 
 ```python
